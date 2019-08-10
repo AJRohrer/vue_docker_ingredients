@@ -2,21 +2,31 @@
   <div class="hello">
      <div class="holder">
 
-
        <!-- Form for submitting data -->
        <form @submit.prevent="addIngredient">
        <input type="text" placeholder="Ingredient here..." v-model="ingredient" v-validate="'min:5'" name="ingredient">
-       <p class="alert" v-if="errors.has('ingredient')">{{ errors.first('ingredient')}}</p>
+       
+       <!-- Animation for entrance of error message. Use Vee Validate for the validtion and show the error if it's invalid -->
+       <transition name="alert-in" enter-active-class="animated flipInX" leave-active-class="animated flipOutX">
+          <article class="alert" v-if="errors.has('ingredient')">{{ errors.first('ingredient')}}</article>
+       </transition>
        </form>
 
         <!-- For loop showing items in a list -->
        <ul>
-         <li v-for="(data,index) in ingredients" :key='index'> {{ index }}. {{data.ingredient}}<br></li>
+         <!-- Wrap v-for in transition to give each list item a transition when they move into the group -->
+         <transition-group name="alert-in" enter-active-class="animated bounceInUp" leave-active-class="animated bounceOutDown">
+              <!-- For loop showing items in a list -->
+            <li v-for="(data,index) in ingredients" :key='index'>
+              {{ index }}. {{data.ingredient}}
+              <i class="fa fa-minus-circle pull-right" v-on:click="remove(index)"></i>
+            </li>
+         </transition-group>
        </ul>
 
       <!-- If else example -->
       <p v-if="ingredients.length >= 2"> You have more than one ingredient</p>
-      <p v-else>You have 1 ingredient</p>
+      <p v-else>You have 1 or fewer ingredients</p>
 
       <!-- Bind CSS classes to items from code behind, use a boolean value to determine if a style is applied -->
       <div v-bind:class="{ alert: !showAlert, 'another-class': true }"></div>
@@ -55,21 +65,35 @@ export default {
       },
       bgColor: 'blue',
       bgWidth: '100%',
+      bgHeight: '30px',
       bgHeight: '30px'
     }
   },
   methods: {
     //function to add items to a list from the textbox: ingredient
     addIngredient(){
-      this.ingredients.push({ingredient:this.ingredient})
-      this.ingredient="";
+      //Use vee validator to determine whether the item in the textbox is valid.
+      this.$validator.validateAll().then((result) => {
+        if (result){
+          this.ingredients.push({ingredient:this.ingredient})
+          this.ingredient="";
+        } else {
+          alert("Not valid");
+        }
+      })
+    },
+    remove(id){
+      this.ingredients.splice(id,1);
     }
+
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 h3 {
     margin: 40px 0 0;
   }
@@ -79,7 +103,6 @@ h3 {
     padding: 0;
   }
   li {
-    margin: 0 10px;
     font-weight: bold;
   }
 
@@ -101,12 +124,7 @@ h3 {
   a {
     color: #42b983;
   }
-  .alert {
-    background-color: yellow;
-    width: 100%;
-    height: 30px;
-
-  }
+  
   .another-class {
     border:5px solid orange;
     height: 30px;
@@ -122,11 +140,36 @@ h3 {
   input {
     border: 2px solid black;
     padding : 20px;
-    margin:10px;
     font-size: 1.3em;
     background-color: #fff;
     color: #687f7f;
-    width: 93%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .alert {
+      background-color: yellow;
+      margin-bottom: 10px;
+  }
+
+  .alert-in-enter-active {
+    animation: bounce-in .5s;
+  }
+
+  .alert-in-leave-active {
+    animation: bounce-in .5s reverse;
+  }
+
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
 </style>

@@ -1,6 +1,17 @@
 <template>
   <div id="app">
-    <ingredient msg="Welcome to Your Vue.js App"/>
+    <!-- This was used when there was no router, now that a router was added things need to change. -->
+    <!-- <ingredient msg="Welcome to Your Vue.js App"/> -->
+
+    <!-- This is where the nav will show, now needed because we have a router-->
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+    </nav>
+
+    <!-- This is where the components should show-->
+    <router-view/>
+
   </div>
 </template>
 
@@ -24,7 +35,7 @@ body{
   display: grid;
   grid-template: auto;
   justify-items: center;
-  align-items: center;
+  padding-top: 50px;
 }
 
 body, html {
@@ -33,6 +44,21 @@ body, html {
 }
 
 #app {
-  width:50%;
+  width:75%;
 }
+
+nav {
+  padding: 20px 20px 20px 0;
+}
+
+nav a {
+  padding: 10px;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 3px;
+  color: rgb(0,110,255);
+  font-weight: bold;
+  margin-right: 15px;
+}
+
 </style>
