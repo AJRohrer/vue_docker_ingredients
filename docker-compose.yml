@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web:
+    image: docker/vueingredients:0.1
+    build: .
+    ports:
+      - "8080:80"

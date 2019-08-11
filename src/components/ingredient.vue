@@ -65,7 +65,6 @@ export default {
       },
       bgColor: 'blue',
       bgWidth: '100%',
-      bgHeight: '30px',
       bgHeight: '30px'
     }
   },

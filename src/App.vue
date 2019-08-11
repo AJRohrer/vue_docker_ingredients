@@ -16,12 +16,11 @@
 </template>
 
 <script>
-import ingredient from './components/ingredient.vue'
 
 export default {
   name: 'app',
   components: {
-    ingredient
+    
   }
 }
 </script>
