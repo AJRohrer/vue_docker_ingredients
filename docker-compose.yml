@@ -5,3 +5,7 @@ services:
     build: .
     ports:
       - "8080:80"
+    labels:
+      - "traefik.frontend.rule=Host:recipies.docker.localhost"
+    deploy:
+      replicas: 3
