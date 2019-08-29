@@ -1,7 +1,10 @@
 <template>
   <div class="hello">
      <div class="holder">
-
+       <label>{{ helloWord }}</label>
+       <br />
+       <textarea v-model="recipeData">
+       </textarea>
        <!-- Form for submitting data -->
        <form @submit.prevent="addIngredient">
        <input type="text" placeholder="Ingredient here..." v-model="ingredient" v-validate="'min:5'" name="ingredient">
@@ -47,10 +50,13 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: 'ingredient',
   data(){
     return {
+      helloWord: "",
+      recipeData: "",
       showAlert: true,
       ingredient: '',
       ingredients: [
@@ -67,6 +73,20 @@ export default {
       bgWidth: '100%',
       bgHeight: '30px'
     }
+  },
+  mounted() {
+    axios({method: "GET", "url": "http://localhost:8090/category"}).then(result => {
+        for (var i = 0; i < result.data.length;i++){
+          this.recipeData += result.data[i].notes;
+          this.ingredients.push({"ingredient" : result.data[i].recipeName});
+        }
+        
+        console.log(result.data);
+    });
+
+    axios({method: "GET", "url": "http://localhost:8090/hello"}).then(result => {
+        this.helloWord = result.data;
+    })
   },
   methods: {
     //function to add items to a list from the textbox: ingredient
@@ -91,8 +111,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css";
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+/* @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"; */
+
+/* @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"; */
 h3 {
     margin: 40px 0 0;
   }
