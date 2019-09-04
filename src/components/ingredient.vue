@@ -111,9 +111,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"; */
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css";
 
-/* @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"; */
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 h3 {
     margin: 40px 0 0;
   }
