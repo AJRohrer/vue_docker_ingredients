@@ -7,11 +7,11 @@
        </textarea>
        <!-- Form for submitting data -->
        <form @submit.prevent="addIngredient">
-       <input type="text" placeholder="Ingredient here..." v-model="ingredient" v-validate="'min:5'" name="ingredient">
+       <input type="text" placeholder="Ingredient here..." v-model="category" v-validate="'min:5'" name="category">
        
        <!-- Animation for entrance of error message. Use Vee Validate for the validtion and show the error if it's invalid -->
        <transition name="alert-in" enter-active-class="animated flipInX" leave-active-class="animated flipOutX">
-          <article class="alert" v-if="errors.has('ingredient')">{{ errors.first('ingredient')}}</article>
+          <article class="alert" v-if="errors.has('category')">{{ errors.first('category')}}</article>
        </transition>
        </form>
 
@@ -20,15 +20,17 @@
          <!-- Wrap v-for in transition to give each list item a transition when they move into the group -->
          <transition-group name="alert-in" enter-active-class="animated bounceInUp" leave-active-class="animated bounceOutDown">
               <!-- For loop showing items in a list -->
-            <li v-for="(data,index) in ingredients" :key='index'>
-              {{ index }}. {{data.ingredient}}
-              <i class="fa fa-minus-circle pull-right" v-on:click="remove(index)"></i>
+            <li v-for="(data,index) in categories" :key='index' >
+              <section>
+              <router-link :to="{path: 'category/' + index}" tag="article">{{ index }}. {{data.category}}<i class="fa fa-minus-circle pull-right" v-on:click="remove(index)"></i></router-link>
+              
+              </section>
             </li>
          </transition-group>
        </ul>
 
       <!-- If else example -->
-      <p v-if="ingredients.length >= 2"> You have more than one ingredient</p>
+      <p v-if="categories.length >= 2"> You have more than one recipe</p>
       <p v-else>You have 1 or fewer ingredients</p>
 
       <!-- Bind CSS classes to items from code behind, use a boolean value to determine if a style is applied -->
@@ -58,12 +60,15 @@ export default {
       helloWord: "",
       recipeData: "",
       showAlert: true,
-      ingredient: '',
-      ingredients: [
-        { "ingredient" : "Peanut butter"},
-        { "ingredient" : "Jelly"},
-        { "ingredient" : "Bread"},
-        { "ingredient" : "Chips"}
+      category: '',
+      categories: [
+        { "category" : "Italian"},
+        { "category" : "Asian"},
+        { "category" : "Comfort"},
+        { "category" : "Random"},
+        { "category" : "Grilling"},
+        { "category" : "Instant Pot"},
+        { "category" : "Dessert"}
       ],
       alertObject: {
         alert: true,
@@ -78,7 +83,7 @@ export default {
     axios({method: "GET", "url": "http://localhost:8090/category"}).then(result => {
         for (var i = 0; i < result.data.length;i++){
           this.recipeData += result.data[i].notes;
-          this.ingredients.push({"ingredient" : result.data[i].recipeName});
+          this.ingredients.push({"category" : result.data[i].recipeName});
         }
         
         console.log(result.data);
@@ -94,15 +99,15 @@ export default {
       //Use vee validator to determine whether the item in the textbox is valid.
       this.$validator.validateAll().then((result) => {
         if (result){
-          this.ingredients.push({ingredient:this.ingredient})
-          this.ingredient="";
+          this.categories.push({category:this.category})
+          this.category="";
         } else {
           alert("Not valid");
         }
       })
     },
     remove(id){
-      this.ingredients.splice(id,1);
+      this.categories.splice(id,1);
     }
 
   }

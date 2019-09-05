@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Ingredient from './components/ingredient.vue'
+import CategoryList from './components/categorylist.vue'
 import About from './components/About.vue'
 
 Vue.use(Router)
@@ -9,8 +9,13 @@ export default new Router({
     routes: [
         {
             path: '/',
+            name: 'categorylist',
+            component: CategoryList
+        },
+        {
+            path: '/',
             name: 'ingredient',
-            component: Ingredient
+            component: CategoryList
         },
         {
             path: '/about/:name',
