@@ -138,6 +138,7 @@ h3 {
     border-left: 5px solid #3eb3f6;
     margin-bottom: 2px;
     color: #3e5252;
+    cursor: pointer;
   }
 
   p {

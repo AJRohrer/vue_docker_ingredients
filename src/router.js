@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import CategoryList from './components/categorylist.vue'
 import About from './components/About.vue'
+import RecipeList from './components/recipelist.vue'
 
 Vue.use(Router)
 
@@ -13,9 +14,9 @@ export default new Router({
             component: CategoryList
         },
         {
-            path: '/',
-            name: 'ingredient',
-            component: CategoryList
+            path: '/category/:id',
+            name: 'recipelist',
+            component: RecipeList
         },
         {
             path: '/about/:name',
