@@ -83,7 +83,7 @@ export default {
     axios({method: "GET", "url": "http://localhost:8090/category"}).then(result => {
         for (var i = 0; i < result.data.length;i++){
           this.recipeData += result.data[i].notes;
-          this.ingredients.push({"category" : result.data[i].recipeName});
+          this.categories.push({"category" : result.data[i].recipeName});
         }
         
         console.log(result.data);
