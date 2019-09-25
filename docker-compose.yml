@@ -1,11 +1,10 @@
-version: '3'
+version: '3.3'
 services:
   web:
-    image: docker/vueingredients:0.1
-    build: .
+    image: docker/vueingredients:09242019
     ports:
       - "8080:80"
-    labels:
-      - "traefik.frontend.rule=Host:recipies.docker.localhost"
-    deploy:
-      replicas: 3
+    # labels:
+    #   - "traefik.frontend.rule=Host:recipies.docker.localhost"
+    # deploy:
+    #   replicas: 3

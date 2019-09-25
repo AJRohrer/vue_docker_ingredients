@@ -23,7 +23,6 @@
             <li v-for="(data,index) in categories" :key='index' >
               <section>
               <router-link :to="{path: 'category/' + index}" tag="article">{{ index }}. {{data.category}}<i class="fa fa-minus-circle pull-right" v-on:click="remove(index)"></i></router-link>
-              
               </section>
             </li>
          </transition-group>
