@@ -27,3 +27,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Bootstrap Database as container for development
+docker run --name andrewsql -p 3306:3306 -d -e MYSQL_ROOT_PASSWORD=docker mysql
+SchemaName: Grocery_Schema

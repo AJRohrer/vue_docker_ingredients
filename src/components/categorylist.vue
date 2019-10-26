@@ -27,25 +27,6 @@
             </li>
          </transition-group>
        </ul>
-
-      <!-- If else example -->
-      <p v-if="categories.length >= 2"> You have more than one recipe</p>
-      <p v-else>You have 1 or fewer ingredients</p>
-
-      <!-- Bind CSS classes to items from code behind, use a boolean value to determine if a style is applied -->
-      <div v-bind:class="{ alert: !showAlert, 'another-class': true }"></div>
-
-      <!-- Bind multiple CSS classes based on a class in the code behind -->
-      <div v-bind:class="alertObject"></div>
-
-      <!-- Bind values to styles in style tag -->
-      <div v-bind:style="{ backgroundColor: bgColor, width: bgWidth, height: bgHeight }"></div>
-
-      <p>These are the ingredients that you need</p>
-
-      <p>These are the ingredients that you posses</p>
-
-
      </div>
   </div>
 </template>
@@ -79,11 +60,11 @@ export default {
     }
   },
   mounted() {
-    axios({method: "GET", "url": "http://localhost:8090/category"}).then(result => {
+    axios({method: "GET", "url": "http://localhost:8090/categories"}).then(result => {
         for (var i = 0; i < result.data.length;i++){
-          this.recipeData += result.data[i].notes;
-          this.categories.push({"category" : result.data[i].recipeName});
+          this.categories.push({"category" : result.data[i].categoryName});
         }
+        console.log(result);
         
     });
 
