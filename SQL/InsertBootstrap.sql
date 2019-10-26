@@ -23,30 +23,30 @@ INSERT INTO Categories VALUES(0, 'Appetizers', '5');
 --
 Select * FROM Categories;
 
-INSERT INTO Recipes VALUES(0, 1, 'General Tsos Chicken', 1);
-INSERT INTO Recipes VALUES(0, 1, 'Beef and Broccoli', 1);
-INSERT INTO Recipes VALUES(0, 2, 'Mac and Cheese', 1);
-INSERT INTO Recipes VALUES(0, 2, 'Chicken Noodle Soup', 1);
+INSERT INTO Recipes VALUES(0, 1, 'General Tsos Chicken', 1, 'https://dinnerthendessert.com/general-tsos-chicken/');
+INSERT INTO Recipes VALUES(0, 1, 'Beef and Broccoli', 1, 'https://www.justataste.com/easy-beef-and-broccoli-recipe/');
+INSERT INTO Recipes VALUES(0, 2, 'Mac and Cheese', 1, 'https://www.momontimeout.com/best-homemade-baked-mac-and-cheese-recipe/');
+INSERT INTO Recipes VALUES(0, 2, 'Chicken Noodle Soup', 1, 'https://www.tasteofhome.com/recipes/the-ultimate-chicken-noodle-soup/');
 --
-INSERT INTO Recipes VALUES(0, 3, 'Pasta', 2);
-INSERT INTO Recipes VALUES(0, 3, 'Pizza', 2);
-INSERT INTO Recipes VALUES(0, 4, 'Hamburgers', 2);
-INSERT INTO Recipes VALUES(0, 4, 'Pulled Pork', 2);
+INSERT INTO Recipes VALUES(0, 3, 'Pasta', 2, '');
+INSERT INTO Recipes VALUES(0, 3, 'Pizza', 2, '');
+INSERT INTO Recipes VALUES(0, 4, 'Hamburgers', 2, '');
+INSERT INTO Recipes VALUES(0, 4, 'Pulled Pork', 2, '');
 --
-INSERT INTO Recipes VALUES(0, 5, 'Hummus', 3);
-INSERT INTO Recipes VALUES(0, 5, 'Chicken Schwarma', 3);
-INSERT INTO Recipes VALUES(0, 6, 'Cheesecake', 3);
-INSERT INTO Recipes VALUES(0, 6, 'Chocolate Chip Cookies', 3);
+INSERT INTO Recipes VALUES(0, 5, 'Hummus', 3, '');
+INSERT INTO Recipes VALUES(0, 5, 'Chicken Schwarma', 3, '');
+INSERT INTO Recipes VALUES(0, 6, 'Cheesecake', 3, '');
+INSERT INTO Recipes VALUES(0, 6, 'Chocolate Chip Cookies', 3, '');
 --
-INSERT INTO Recipes VALUES(0, 7, 'Chicken Fried Rice', 4);
-INSERT INTO Recipes VALUES(0, 7, 'Orange Chicken', 4);
-INSERT INTO Recipes VALUES(0, 8, 'Red Curry Rice', 4);
-INSERT INTO Recipes VALUES(0, 8, 'Butter Chicken', 4);
+INSERT INTO Recipes VALUES(0, 7, 'Chicken Fried Rice', 4, '');
+INSERT INTO Recipes VALUES(0, 7, 'Orange Chicken', 4, '');
+INSERT INTO Recipes VALUES(0, 8, 'Red Curry Rice', 4, '');
+INSERT INTO Recipes VALUES(0, 8, 'Butter Chicken', 4, '');
 --
-INSERT INTO Recipes VALUES(0, 9, 'Basil Fried Rice', 5);
-INSERT INTO Recipes VALUES(0, 9, 'Peanut Chicken', 5);
-INSERT INTO Recipes VALUES(0, 10, 'BBQ Wings', 5);
-INSERT INTO Recipes VALUES(0, 10, 'Guacamole', 5);
+INSERT INTO Recipes VALUES(0, 9, 'Basil Fried Rice', 5, '');
+INSERT INTO Recipes VALUES(0, 9, 'Peanut Chicken', 5, '');
+INSERT INTO Recipes VALUES(0, 10, 'BBQ Wings', 5, '');
+INSERT INTO Recipes VALUES(0, 10, 'Guacamole', 5, '');
 --
 SELECT * FROM Recipes;
 
