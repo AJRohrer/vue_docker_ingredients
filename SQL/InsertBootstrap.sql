@@ -1,9 +1,9 @@
 Use Grocery_Schema;
-INSERT INTO Users VALUES(0, 'Andrew', 'Rohrer', 'docker');
-INSERT INTO Users VALUES(0, 'Katherine', 'Rohrer', 'diddlydoos');
-INSERT INTO Users VALUES(0, 'Michael', 'Rohrer', 'apple');
-INSERT INTO Users VALUES(0, 'Jill', 'Rohrer', 'bookkeeper');
-INSERT INTO Users VALUES(0, 'Rob', 'Rohrer', 'lakehouse');
+INSERT INTO Users VALUES(0, 'Andrew', 'Rohrer', 'AJRohrer', 'docker');
+INSERT INTO Users VALUES(0, 'Katherine', 'Rohrer', 'KARohrer', 'diddlydoos');
+INSERT INTO Users VALUES(0, 'Michael', 'Rohrer', 'MRRohrer', 'apple');
+INSERT INTO Users VALUES(0, 'Jill', 'Rohrer', 'JTRohrer', 'bookkeeper');
+INSERT INTO Users VALUES(0, 'Rob', 'Rohrer', 'RVRohrer', 'lakehouse');
 SELECT * FROM Users;
 
 INSERT INTO Categories VALUES(0, 'Asian', '1');

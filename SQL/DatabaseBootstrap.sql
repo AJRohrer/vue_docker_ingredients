@@ -4,6 +4,7 @@ Create table if not exists Users (
 	UserID int NOT NULL AUTO_INCREMENT,
     UserFirstName VARCHAR(100),
     UserLastName VARCHAR(100),
+    UserName VARCHAR(100),
     UserPassword VARCHAR(100),
     PRIMARY KEY (UserID)
 );
