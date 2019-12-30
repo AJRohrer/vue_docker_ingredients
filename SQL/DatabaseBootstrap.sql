@@ -37,9 +37,11 @@ Create table if not exists Ingredients (
 );
 
 Create table if not exists Directions (
+    DirectionID int NOT NULL,
 	DirectionNumber int NOT NULL,
     DirectionDescription VARCHAR(1000),
     RecipeID int NOT NULL,
+    PRIMARY KEY (DirectionID),
     FOREIGN KEY (RecipeID) REFERENCES Recipes(RecipeID)
 );
 

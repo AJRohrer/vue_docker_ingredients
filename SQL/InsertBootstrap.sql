@@ -172,104 +172,104 @@ INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 20);
 --
 SELECT * FROM Ingredients;
 
-INSERT INTO Directions VALUES (1, 'Cook Chicken and fish sauce in pan until chicken is 165F', 1);
-INSERT INTO Directions VALUES (3, 'Add honey and simmer', 1);
-INSERT INTO Directions VALUES (4, 'In the meantime, cook rice separately', 1);
-INSERT INTO Directions VALUES (5, 'Add corn starch and mix then serve', 1);
+INSERT INTO Directions VALUES (0,1, 'Cook Chicken and fish sauce in pan until chicken is 165F', 1);
+INSERT INTO Directions VALUES (0,3, 'Add honey and simmer', 1);
+INSERT INTO Directions VALUES (0,4, 'In the meantime, cook rice separately', 1);
+INSERT INTO Directions VALUES (0,5, 'Add corn starch and mix then serve', 1);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 2);
-INSERT INTO Directions VALUES (3, 'Test2', 2);
-INSERT INTO Directions VALUES (4, 'Test3', 2);
-INSERT INTO Directions VALUES (5, 'Test4', 2);
+INSERT INTO Directions VALUES (0,1, 'Test1', 2);
+INSERT INTO Directions VALUES (0,3, 'Test2', 2);
+INSERT INTO Directions VALUES (0,4, 'Test3', 2);
+INSERT INTO Directions VALUES (0,5, 'Test4', 2);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 3);
-INSERT INTO Directions VALUES (3, 'Test2', 3);
-INSERT INTO Directions VALUES (4, 'Test3', 3);
-INSERT INTO Directions VALUES (5, 'Test4', 3);
+INSERT INTO Directions VALUES (0,1, 'Test1', 3);
+INSERT INTO Directions VALUES (0,3, 'Test2', 3);
+INSERT INTO Directions VALUES (0,4, 'Test3', 3);
+INSERT INTO Directions VALUES (0,5, 'Test4', 3);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 4);
-INSERT INTO Directions VALUES (3, 'Test2', 4);
-INSERT INTO Directions VALUES (4, 'Test3', 4);
-INSERT INTO Directions VALUES (5, 'Test4', 4);
+INSERT INTO Directions VALUES (0,1, 'Test1', 4);
+INSERT INTO Directions VALUES (0,3, 'Test2', 4);
+INSERT INTO Directions VALUES (0,4, 'Test3', 4);
+INSERT INTO Directions VALUES (0,5, 'Test4', 4);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 5);
-INSERT INTO Directions VALUES (3, 'Test2', 5);
-INSERT INTO Directions VALUES (4, 'Test3', 5);
-INSERT INTO Directions VALUES (5, 'Test4', 5);
+INSERT INTO Directions VALUES (0,1, 'Test1', 5);
+INSERT INTO Directions VALUES (0,3, 'Test2', 5);
+INSERT INTO Directions VALUES (0,4, 'Test3', 5);
+INSERT INTO Directions VALUES (0,5, 'Test4', 5);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 6);
-INSERT INTO Directions VALUES (3, 'Test2', 6);
-INSERT INTO Directions VALUES (4, 'Test3', 6);
-INSERT INTO Directions VALUES (5, 'Test4', 6);
+INSERT INTO Directions VALUES (0,1, 'Test1', 6);
+INSERT INTO Directions VALUES (0,3, 'Test2', 6);
+INSERT INTO Directions VALUES (0,4, 'Test3', 6);
+INSERT INTO Directions VALUES (0,5, 'Test4', 6);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 7);
-INSERT INTO Directions VALUES (3, 'Test2', 7);
-INSERT INTO Directions VALUES (4, 'Test3', 7);
-INSERT INTO Directions VALUES (5, 'Test4', 7);
+INSERT INTO Directions VALUES (0,1, 'Test1', 7);
+INSERT INTO Directions VALUES (0,3, 'Test2', 7);
+INSERT INTO Directions VALUES (0,4, 'Test3', 7);
+INSERT INTO Directions VALUES (0,5, 'Test4', 7);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 8);
-INSERT INTO Directions VALUES (3, 'Test2', 8);
-INSERT INTO Directions VALUES (4, 'Test3', 8);
-INSERT INTO Directions VALUES (5, 'Test4', 8);
+INSERT INTO Directions VALUES (0,1, 'Test1', 8);
+INSERT INTO Directions VALUES (0,3, 'Test2', 8);
+INSERT INTO Directions VALUES (0,4, 'Test3', 8);
+INSERT INTO Directions VALUES (0,5, 'Test4', 8);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 9);
-INSERT INTO Directions VALUES (3, 'Test2', 9);
-INSERT INTO Directions VALUES (4, 'Test3', 9);
-INSERT INTO Directions VALUES (5, 'Test4', 9);
+INSERT INTO Directions VALUES (0,1, 'Test1', 9);
+INSERT INTO Directions VALUES (0,3, 'Test2', 9);
+INSERT INTO Directions VALUES (0,4, 'Test3', 9);
+INSERT INTO Directions VALUES (0,5, 'Test4', 9);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 10);
-INSERT INTO Directions VALUES (3, 'Test2', 10);
-INSERT INTO Directions VALUES (4, 'Test3', 10);
-INSERT INTO Directions VALUES (5, 'Test4', 10);
+INSERT INTO Directions VALUES (0,1, 'Test1', 10);
+INSERT INTO Directions VALUES (0,3, 'Test2', 10);
+INSERT INTO Directions VALUES (0,4, 'Test3', 10);
+INSERT INTO Directions VALUES (0,5, 'Test4', 10);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 11);
-INSERT INTO Directions VALUES (3, 'Test2', 11);
-INSERT INTO Directions VALUES (4, 'Test3', 11);
-INSERT INTO Directions VALUES (5, 'Test4', 11);
+INSERT INTO Directions VALUES (0,1, 'Test1', 11);
+INSERT INTO Directions VALUES (0,3, 'Test2', 11);
+INSERT INTO Directions VALUES (0,4, 'Test3', 11);
+INSERT INTO Directions VALUES (0,5, 'Test4', 11);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 12);
-INSERT INTO Directions VALUES (3, 'Test2', 12);
-INSERT INTO Directions VALUES (4, 'Test3', 12);
-INSERT INTO Directions VALUES (5, 'Test4', 12);
+INSERT INTO Directions VALUES (0,1, 'Test1', 12);
+INSERT INTO Directions VALUES (0,3, 'Test2', 12);
+INSERT INTO Directions VALUES (0,4, 'Test3', 12);
+INSERT INTO Directions VALUES (0,5, 'Test4', 12);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 13);
-INSERT INTO Directions VALUES (3, 'Test2', 13);
-INSERT INTO Directions VALUES (4, 'Test3', 13);
-INSERT INTO Directions VALUES (5, 'Test4', 13);
+INSERT INTO Directions VALUES (0,1, 'Test1', 13);
+INSERT INTO Directions VALUES (0,3, 'Test2', 13);
+INSERT INTO Directions VALUES (0,4, 'Test3', 13);
+INSERT INTO Directions VALUES (0,5, 'Test4', 13);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 14);
-INSERT INTO Directions VALUES (3, 'Test2', 14);
-INSERT INTO Directions VALUES (4, 'Test3', 14);
-INSERT INTO Directions VALUES (5, 'Test4', 14);
+INSERT INTO Directions VALUES (0,1, 'Test1', 14);
+INSERT INTO Directions VALUES (0,3, 'Test2', 14);
+INSERT INTO Directions VALUES (0,4, 'Test3', 14);
+INSERT INTO Directions VALUES (0,5, 'Test4', 14);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 15);
-INSERT INTO Directions VALUES (3, 'Test2', 15);
-INSERT INTO Directions VALUES (4, 'Test3', 15);
-INSERT INTO Directions VALUES (5, 'Test4', 15);
+INSERT INTO Directions VALUES (0,1, 'Test1', 15);
+INSERT INTO Directions VALUES (0,3, 'Test2', 15);
+INSERT INTO Directions VALUES (0,4, 'Test3', 15);
+INSERT INTO Directions VALUES (0,5, 'Test4', 15);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 16);
-INSERT INTO Directions VALUES (3, 'Test2', 16);
-INSERT INTO Directions VALUES (4, 'Test3', 16);
-INSERT INTO Directions VALUES (5, 'Test4', 16);
+INSERT INTO Directions VALUES (0,1, 'Test1', 16);
+INSERT INTO Directions VALUES (0,3, 'Test2', 16);
+INSERT INTO Directions VALUES (0,4, 'Test3', 16);
+INSERT INTO Directions VALUES (0,5, 'Test4', 16);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 17);
-INSERT INTO Directions VALUES (3, 'Test2', 17);
-INSERT INTO Directions VALUES (4, 'Test3', 17);
-INSERT INTO Directions VALUES (5, 'Test4', 17);
+INSERT INTO Directions VALUES (0,1, 'Test1', 17);
+INSERT INTO Directions VALUES (0,3, 'Test2', 17);
+INSERT INTO Directions VALUES (0,4, 'Test3', 17);
+INSERT INTO Directions VALUES (0,5, 'Test4', 17);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 18);
-INSERT INTO Directions VALUES (3, 'Test2', 18);
-INSERT INTO Directions VALUES (4, 'Test3', 18);
-INSERT INTO Directions VALUES (5, 'Test4', 18);
+INSERT INTO Directions VALUES (0,1, 'Test1', 18);
+INSERT INTO Directions VALUES (0,3, 'Test2', 18);
+INSERT INTO Directions VALUES (0,4, 'Test3', 18);
+INSERT INTO Directions VALUES (0,5, 'Test4', 18);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 19);
-INSERT INTO Directions VALUES (3, 'Test2', 19);
-INSERT INTO Directions VALUES (4, 'Test3', 19);
-INSERT INTO Directions VALUES (5, 'Test4', 19);
+INSERT INTO Directions VALUES (0,1, 'Test1', 19);
+INSERT INTO Directions VALUES (0,3, 'Test2', 19);
+INSERT INTO Directions VALUES (0,4, 'Test3', 19);
+INSERT INTO Directions VALUES (0,5, 'Test4', 19);
 --
-INSERT INTO Directions VALUES (1, 'Test1', 20);
-INSERT INTO Directions VALUES (3, 'Test2', 20);
-INSERT INTO Directions VALUES (4, 'Test3', 20);
-INSERT INTO Directions VALUES (5, 'Test4', 20);
+INSERT INTO Directions VALUES (0,1, 'Test1', 20);
+INSERT INTO Directions VALUES (0,3, 'Test2', 20);
+INSERT INTO Directions VALUES (0,4, 'Test3', 20);
+INSERT INTO Directions VALUES (0,5, 'Test4', 20);
 --
 SELECT * FROM Directions;
