@@ -33,11 +33,12 @@ Create table if not exists Ingredients (
 	IngredientName VARCHAR(100),
     IngredientQuantity VARCHAR(30),
     RecipeID int NOT NULL,
+    PRIMARY KEY (IngredientID),
     FOREIGN KEY (RecipeID) REFERENCES Recipes(RecipeID)
 );
 
 Create table if not exists Directions (
-    DirectionID int NOT NULL,
+    DirectionID int NOT NULL AUTO_INCREMENT,
 	DirectionNumber int NOT NULL,
     DirectionDescription VARCHAR(1000),
     RecipeID int NOT NULL,
