@@ -50,125 +50,125 @@ INSERT INTO Recipes VALUES(0, 10, 'Guacamole', 5, '');
 --
 SELECT * FROM Recipes;
 
-INSERT INTO Ingredients VALUES ('Chicken', '1 lb', 1);
-INSERT INTO Ingredients VALUES ('Fish Sauce', '1/4 Cup', 1);
-INSERT INTO Ingredients VALUES ('Honey', '1/2 Cup', 1);
-INSERT INTO Ingredients VALUES ('Rice', '1 Cup Uncooked', 1);
-INSERT INTO Ingredients VALUES ('Corn Starch', '2 tsp', 1);
+INSERT INTO Ingredients VALUES (0,'Chicken', '1 lb', 1);
+INSERT INTO Ingredients VALUES (0,'Fish Sauce', '1/4 Cup', 1);
+INSERT INTO Ingredients VALUES (0,'Honey', '1/2 Cup', 1);
+INSERT INTO Ingredients VALUES (0,'Rice', '1 Cup Uncooked', 1);
+INSERT INTO Ingredients VALUES (0,'Corn Starch', '2 tsp', 1);
 --
-INSERT INTO Ingredients VALUES ('Beef', '1 lb', 2);
-INSERT INTO Ingredients VALUES ('Broccoli', '2 Cup', 2);
-INSERT INTO Ingredients VALUES ('Soy Sauce', '1/4 Cup', 2);
-INSERT INTO Ingredients VALUES ('Rice', '1 Cup Uncooked', 2);
-INSERT INTO Ingredients VALUES ('Eggs', '2 large', 2);
+INSERT INTO Ingredients VALUES (0,'Beef', '1 lb', 2);
+INSERT INTO Ingredients VALUES (0,'Broccoli', '2 Cup', 2);
+INSERT INTO Ingredients VALUES (0,'Soy Sauce', '1/4 Cup', 2);
+INSERT INTO Ingredients VALUES (0,'Rice', '1 Cup Uncooked', 2);
+INSERT INTO Ingredients VALUES (0,'Eggs', '2 large', 2);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 3);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 3);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 3);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 3);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 3);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 3);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 3);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 3);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 3);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 3);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 4);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 4);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 4);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 4);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 4);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 4);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 4);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 4);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 4);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 4);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 5);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 5);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 5);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 5);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 5);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 5);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 5);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 5);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 5);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 5);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 6);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 6);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 6);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 6);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 6);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 6);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 6);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 6);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 6);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 6);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 7);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 7);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 7);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 7);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 7);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 7);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 7);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 7);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 7);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 7);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 8);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 8);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 8);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 8);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 8);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 8);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 8);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 8);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 8);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 8);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 9);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 9);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 9);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 9);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 9);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 9);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 9);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 9);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 9);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 9);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 10);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 10);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 10);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 10);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 10);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 10);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 10);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 10);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 10);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 10);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 11);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 11);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 11);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 11);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 11);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 11);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 11);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 11);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 11);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 11);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 12);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 12);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 12);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 12);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 12);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 12);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 12);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 12);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 12);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 12);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 13);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 13);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 13);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 13);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 13);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 13);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 13);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 13);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 13);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 13);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 14);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 14);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 14);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 14);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 14);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 14);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 14);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 14);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 14);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 14);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 15);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 15);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 15);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 15);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 15);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 15);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 15);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 15);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 15);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 15);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 16);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 16);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 16);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 16);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 16);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 16);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 16);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 16);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 16);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 16);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 17);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 17);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 17);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 17);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 17);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 17);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 17);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 17);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 17);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 17);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 18);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 18);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 18);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 18);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 18);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 18);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 18);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 18);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 18);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 18);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 19);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 19);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 19);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 19);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 19);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 19);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 19);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 19);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 19);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 19);
 --
-INSERT INTO Ingredients VALUES ('Test1', '1 lb', 20);
-INSERT INTO Ingredients VALUES ('Test2', '2 Cup', 20);
-INSERT INTO Ingredients VALUES ('Test3', '1/4 Cup', 20);
-INSERT INTO Ingredients VALUES ('Test4', '1 Cup Uncooked', 20);
-INSERT INTO Ingredients VALUES ('Test5', '2 large', 20);
+INSERT INTO Ingredients VALUES (0,'Test1', '1 lb', 20);
+INSERT INTO Ingredients VALUES (0,'Test2', '2 Cup', 20);
+INSERT INTO Ingredients VALUES (0,'Test3', '1/4 Cup', 20);
+INSERT INTO Ingredients VALUES (0,'Test4', '1 Cup Uncooked', 20);
+INSERT INTO Ingredients VALUES (0,'Test5', '2 large', 20);
 --
 SELECT * FROM Ingredients;
 

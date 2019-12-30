@@ -29,6 +29,7 @@ Create table if not exists Recipes (
 );
 
 Create table if not exists Ingredients (
+    IngredientID int NOT NULL AUTO_INCREMENT,
 	IngredientName VARCHAR(100),
     IngredientQuantity VARCHAR(30),
     RecipeID int NOT NULL,
