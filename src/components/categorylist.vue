@@ -7,7 +7,8 @@
        </textarea>
        <!-- Form for submitting data -->
        <form @submit.prevent="addIngredient">
-       <input type="text" placeholder="Ingredient here..." v-model="category" v-validate="'min:5'" name="category">
+       <input type="text" placeholder="Category here..." v-model="category" v-validate="'min:5'" name="category">
+       {{category}}
        
        <!-- Animation for entrance of error message. Use Vee Validate for the validtion and show the error if it's invalid -->
        <transition name="alert-in" enter-active-class="animated flipInX" leave-active-class="animated flipOutX">
@@ -22,7 +23,7 @@
               <!-- For loop showing items in a list -->
             <li v-for="(data,index) in categories" :key='index' >
               <section>
-              <router-link :to="{path: 'category/' + index}" tag="article">{{ index }}. {{data.category}}<i class="fa fa-minus-circle pull-right" v-on:click="remove(index)"></i></router-link>
+              <router-link :to="{path: 'category/' + data.category._CategoryID}" tag="article">{{ index + 1 }}. {{data.category._CategoryName}}<i class="fa fa-minus-circle pull-right" v-on:click="remove(index)"></i></router-link>
               </section>
             </li>
          </transition-group>
@@ -41,15 +42,7 @@ export default {
       recipeData: "",
       showAlert: true,
       category: '',
-      categories: [
-        { "category" : "Italian"},
-        { "category" : "Asian"},
-        { "category" : "Comfort"},
-        { "category" : "Random"},
-        { "category" : "Grilling"},
-        { "category" : "Instant Pot"},
-        { "category" : "Dessert"}
-      ],
+      categories: [],
       alertObject: {
         alert: true,
         pinkclass: true
@@ -60,9 +53,9 @@ export default {
     }
   },
   mounted() {
-    axios({method: "GET", "url": "http://localhost:8090/categories"}).then(result => {
+    axios({method: "GET", "url": "http://localhost:8090/Categories?userId=1"}).then(result => {
         for (var i = 0; i < result.data.length;i++){
-          this.categories.push({"category" : result.data[i].categoryName});
+          this.categories.push({"category" : result.data[i]});
         }
         console.log(result);
         
@@ -78,8 +71,9 @@ export default {
       //Use vee validator to determine whether the item in the textbox is valid.
       this.$validator.validateAll().then((result) => {
         if (result){
-          this.categories.push({category:this.category})
+          this.categories.push({category:this.category});
           this.category="";
+          console.log("this is category: " + this.category);
         } else {
           alert("Not valid");
         }
