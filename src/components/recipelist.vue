@@ -6,7 +6,7 @@
     <ul>
         <li v-for="(data,index) in recipes" :key='index'>
             <section>
-                <router-link :to="{path: 'recipe/' + categoryId + '/' + index}" tag="article">{{index}}. {{data.recipe}}<i class="fa fa-minus-circle pull-right" v-on:click="remove(index)"></i></router-link>
+                <router-link :to="{path: '/Recipe/' + data.recipe._RecipeID}" tag="article">{{index}}. {{data.recipe._RecipeName}}<i class="fa fa-minus-circle pull-right" v-on:click="remove(index)"></i></router-link>
             </section>
         </li>
     </ul>
@@ -15,19 +15,22 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
     name: 'Recipe',
     data() {
         return {
             categoryId: this.$route.params.id,
-            recipes : [
-                { "recipe" : "Pizza" },
-                { "recipe" : "Spaghetti" },
-                { "recipe" : "Lazagna" },
-                { "recipe" : "Alfredo" },
-                { "recipe" : "Flatbread" }
-            ]
+            recipes : []
         }
+    },
+    mounted(){
+        axios({method: "GET","url": "http://localhost:8090/Recipes?CategoryId=" + this.categoryId}).then(result => {
+            for (var i = 0; i < result.data.length;i++){
+                this.recipes.push({"recipe": result.data[i]});
+            }
+            console.log(result);
+        });
     }
 }
 </script>
