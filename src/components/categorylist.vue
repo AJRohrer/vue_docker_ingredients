@@ -1,8 +1,6 @@
 <template>
   <div class="hello">
      <div class="holder">
-       <label>{{ helloWord }}</label>
-       <br />
        <textarea v-model="recipeData">
        </textarea>
        <!-- Form for submitting data -->
@@ -38,7 +36,6 @@ export default {
   name: 'ingredient',
   data(){
     return {
-      helloWord: "",
       recipeData: "",
       showAlert: true,
       category: '',
