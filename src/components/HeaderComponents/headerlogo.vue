@@ -14,4 +14,11 @@
         width: 60px;
     }
 
+    @media only screen and (max-width: 600px){
+        .recipeLogo {
+            height: 40px;
+            width: 40px;
+        }
+    }
+
 </style>

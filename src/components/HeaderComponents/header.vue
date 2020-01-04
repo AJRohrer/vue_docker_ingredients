@@ -19,17 +19,27 @@ export default {
 </script>
 
 <style scoped>
-    .headerContainer {
-       display: flex;
-       flex-wrap: wrap;
-    }
+    .headerItemTitle {
+        width: 90%;
+        flex-grow: 1;
+        font-size: 45px;
+        }
     .headerItemLogo {
         width: 10%;
         flex-grow: 1;
     }
-    .headerItemTitle {
-        width: 60%;
+
+    @media only screen and (max-width: 600px){
+        .headerItemTitle {
+        width: 85%;
         flex-grow: 1;
-        font-size: 30px;
+        font-size: 35px;
+        }
     }
+
+    .headerContainer {
+       display: flex;
+       flex-wrap: wrap;
+    }
+    
 </style>

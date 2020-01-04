@@ -1,30 +1,22 @@
 <template>
   <div class="hello">
      <div class="holder">
-       <textarea v-model="recipeData">
-       </textarea>
-       <!-- Form for submitting data -->
-       <form @submit.prevent="addIngredient">
-       <input type="text" placeholder="Category here..." v-model="category" v-validate="'min:5'" name="category">
-       {{category}}
-       
-       <!-- Animation for entrance of error message. Use Vee Validate for the validtion and show the error if it's invalid -->
-       <transition name="alert-in" enter-active-class="animated flipInX" leave-active-class="animated flipOutX">
-          <article class="alert" v-if="errors.has('category')">{{ errors.first('category')}}</article>
-       </transition>
-       </form>
-
-        <!-- For loop showing items in a list -->
+       <!-- For loop showing items in a list -->
        <ul>
-         <!-- Wrap v-for in transition to give each list item a transition when they move into the group -->
-         <transition-group name="alert-in" enter-active-class="animated bounceInUp" leave-active-class="animated bounceOutDown">
-              <!-- For loop showing items in a list -->
-            <li v-for="(data,index) in categories" :key='index' >
-              <section>
-              <router-link :to="{path: 'category/' + data.category._CategoryID}" tag="article">{{ index + 1 }}. {{data.category._CategoryName}}<i class="fa fa-minus-circle pull-right" v-on:click="remove(index)"></i></router-link>
-              </section>
-            </li>
-         </transition-group>
+         
+            <!-- For loop showing items in a list the "data object is a category" -->
+          <li v-for="(data,index) in categories" :key='index' >
+            <section>
+            <!-- <router-link :to="{path: 'category/' + data.category._CategoryID}" tag="article"> -->
+              <div class="categoryContainer">
+                <div class="categoryItemNumber">{{ index + 1 }}.</div>
+                <div class="categoryItem"><CategoryListItem v-bind="data"/></div>
+              </div>
+              
+               
+            <!-- </router-link> -->
+            </section>
+          </li>
        </ul>
      </div>
   </div>
@@ -33,9 +25,10 @@
 <script>
 import axios from "axios";
 import { recipeServiceHost } from '../constants'
+import CategoryListItem from './ListItemComponents/categorylistitem'
 
 export default {
-  name: 'ingredient',
+  name: 'CategoryList',
   data(){
     return {
       recipeData: "",
@@ -80,6 +73,9 @@ export default {
       this.categories.splice(id,1);
     }
 
+  },
+  components: {
+    CategoryListItem
   }
 }
 </script>
@@ -155,6 +151,21 @@ h3 {
   .alert-in-leave-active {
     animation: bounce-in .5s reverse;
   }
+
+  .categoryContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .categoryItem {
+        flex-grow: 1;
+        width: 32%;
+    }
+
+    .categoryItemNumber {
+        flex-grow: 1;
+        max-width: 5%;
+    }
 
   @keyframes bounce-in {
     0% {

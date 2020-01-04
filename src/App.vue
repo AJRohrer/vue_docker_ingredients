@@ -34,7 +34,7 @@ body{
   display: grid;
   grid-template: auto;
   justify-items: center;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 body, html {
@@ -44,6 +44,12 @@ body, html {
 
 #app {
   width:75%;
+}
+
+@media only screen and (max-width: 600px){
+  #app {
+    width: 95%;
+  }
 }
 
 nav {
