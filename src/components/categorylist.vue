@@ -32,6 +32,8 @@
 
 <script>
 import axios from "axios";
+import { recipeServiceHost } from '../constants'
+
 export default {
   name: 'ingredient',
   data(){
@@ -50,7 +52,7 @@ export default {
     }
   },
   mounted() {
-    axios({method: "GET", "url": "http://localhost:8090/Categories?userId=1"}).then(result => {
+    axios({method: "GET", "url": recipeServiceHost + "/Categories?userId=1"}).then(result => {
         for (var i = 0; i < result.data.length;i++){
           this.categories.push({"category" : result.data[i]});
         }
@@ -58,7 +60,7 @@ export default {
         
     });
 
-    axios({method: "GET", "url": "http://localhost:8090/hello"}).then(result => {
+    axios({method: "GET", "url": recipeServiceHost + "/hello"}).then(result => {
         this.helloWord = result.data;
     })
   },

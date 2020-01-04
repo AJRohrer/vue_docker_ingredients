@@ -16,6 +16,7 @@
 
 <script>
 import axios from "axios";
+import {recipeServiceHost} from '../constants'
 export default {
     name: 'Recipe',
     data() {
@@ -25,7 +26,7 @@ export default {
         }
     },
     mounted(){
-        axios({method: "GET","url": "http://localhost:8090/Recipes?CategoryId=" + this.categoryId}).then(result => {
+        axios({method: "GET","url": recipeServiceHost + "/Recipes?CategoryId=" + this.categoryId}).then(result => {
             for (var i = 0; i < result.data.length;i++){
                 this.recipes.push({"recipe": result.data[i]});
             }

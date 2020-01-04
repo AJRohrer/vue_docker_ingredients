@@ -1,0 +1,1 @@
+export const recipeServiceHost = "http://localhost:8091";
