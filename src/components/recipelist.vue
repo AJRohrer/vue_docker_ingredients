@@ -30,7 +30,6 @@ export default {
             for (var i = 0; i < result.data.length;i++){
                 this.recipes.push({"recipe": result.data[i]});
             }
-            console.log(result);
         });
     }
 }

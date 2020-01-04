@@ -2,7 +2,7 @@
   <div id="app">
     <!-- This was used when there was no router, now that a router was added things need to change. -->
     <!-- <ingredient msg="Welcome to Your Vue.js App"/> -->
-
+    <Header></Header>
     <!-- This is where the nav will show, now needed because we have a router-->
     <nav>
       <router-link to="/">Home</router-link>
@@ -16,11 +16,11 @@
 </template>
 
 <script>
-
+import Header from './components/HeaderComponents/header'
 export default {
   name: 'app',
   components: {
-    
+    Header
   }
 }
 </script>

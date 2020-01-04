@@ -56,7 +56,6 @@ export default {
         for (var i = 0; i < result.data.length;i++){
           this.categories.push({"category" : result.data[i]});
         }
-        console.log(result);
         
     });
 
@@ -72,7 +71,6 @@ export default {
         if (result){
           this.categories.push({category:this.category});
           this.category="";
-          console.log("this is category: " + this.category);
         } else {
           alert("Not valid");
         }
