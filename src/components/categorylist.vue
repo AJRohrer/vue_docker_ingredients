@@ -1,25 +1,18 @@
 <template>
-  <div class="hello">
-     <div class="holder">
-       <!-- For loop showing items in a list -->
-       <ul>
-         
-            <!-- For loop showing items in a list the "data object is a category" -->
-          <li v-for="(data,index) in categories" :key='index' >
-            <section>
-            <!-- <router-link :to="{path: 'category/' + data.category._CategoryID}" tag="article"> -->
-              <div class="categoryContainer">
-                <div class="categoryItemNumber">{{ index + 1 }}.</div>
-                <div class="categoryItem"><CategoryListItem v-bind="data"/></div>
-              </div>
-              
-               
-            <!-- </router-link> -->
-            </section>
-          </li>
-       </ul>
-     </div>
-  </div>
+    <div class="holder">
+      <!-- For loop showing items in a list -->
+      <ul>
+          <!-- For loop showing items in a list the "data object is a category" -->
+        <li v-for="(data,index) in categories" :key='index' >
+          <section class="categoryContainer">
+          <!-- <router-link :to="{path: 'category/' + data.category._CategoryID}" tag="article"> -->
+              <div class="categoryItemNumber">{{ index + 1 }}.</div>
+              <div class="categoryItem"><CategoryListItem v-bind="data"/></div>
+          <!-- </router-link> -->
+          </section>
+        </li>
+      </ul>
+    </div>
 </template>
 
 <script>
@@ -51,10 +44,6 @@ export default {
         }
         
     });
-
-    axios({method: "GET", "url": recipeServiceHost + "/hello"}).then(result => {
-        this.helloWord = result.data;
-    })
   },
   methods: {
     //function to add items to a list from the textbox: ingredient
@@ -92,9 +81,6 @@ h3 {
     margin: 0;
     list-style-type: none;
     padding: 0;
-  }
-  li {
-    font-weight: bold;
   }
 
   ul li {
