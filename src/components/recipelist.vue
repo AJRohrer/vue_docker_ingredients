@@ -1,6 +1,11 @@
 <template>
     <div class="holder">
         <ul>
+            <li class="addRecipe">
+                <section class="recipeContainer">
+                    <div class="recipeAddItem" v-on:click="createNewRecipe()"><i class="fa fa-plus"></i></div>
+                </section>
+            </li>
             <li v-for="(data,index) in recipes" :key='index'>
                 <section class="recipeContainer">
                     <div class="recipeItemNumber">{{ index + 1 }}.</div>
@@ -31,6 +36,11 @@ export default {
             }
         });
     },
+    methods: {
+        createNewRecipe() {
+            alert("You want to create a new recipe!");
+        }
+    },
     components: {
         RecipeListItem
     }
@@ -48,10 +58,10 @@ export default {
         padding: 20px;
         font-size: 1.3em;
         background-color: #e0edf4;
-        border-left: 5px solid #3eb3f6;
         margin-bottom: 2px;
         color: #3e5252;
         cursor: pointer;
+        width: 95%;
     }
 
     p {
@@ -73,6 +83,12 @@ export default {
         flex-wrap: wrap;
     }
 
+    .recipeAddItem {
+        flex-grow: 1;
+        text-align: center;
+        font-size: 1.4em;
+    }
+
     .recipeItem {
         flex-grow: 1;
         width: 32%;
@@ -81,5 +97,12 @@ export default {
     .recipeItemNumber {
         flex-grow: 1;
         max-width: 5%;
+    }
+
+    .addRecipe {
+        flex-grow: 1;
+        background: #8DE8A2;
+        color:#fff;
+        height:25px;
     }
 </style>

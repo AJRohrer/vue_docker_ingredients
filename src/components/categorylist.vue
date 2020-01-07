@@ -2,6 +2,11 @@
     <div class="holder">
       <!-- For loop showing items in a list -->
       <ul>
+        <li class="addCategory">
+          <section class="categoryContainer">
+              <div class="categoryAddItem" v-on:click="createNewCategory()"><i class="fa fa-plus"></i></div>
+          </section>
+        </li>
           <!-- For loop showing items in a list the "data object is a category" -->
         <li v-for="(data,index) in categories" :key='index' >
           <section class="categoryContainer">
@@ -46,22 +51,9 @@ export default {
     });
   },
   methods: {
-    //function to add items to a list from the textbox: ingredient
-    addIngredient(){
-      //Use vee validator to determine whether the item in the textbox is valid.
-      this.$validator.validateAll().then((result) => {
-        if (result){
-          this.categories.push({category:this.category});
-          this.category="";
-        } else {
-          alert("Not valid");
-        }
-      })
-    },
-    remove(id){
-      this.categories.splice(id,1);
+    createNewCategory() {
+      alert("You want to create a new recipe category!");
     }
-
   },
   components: {
     CategoryListItem
@@ -86,11 +78,16 @@ h3 {
   ul li {
     padding: 20px;
     font-size: 1.3em;
-    background-color: #e0edf4;
-    border-left: 5px solid #3eb3f6;
+    background-color: #5bbffd;
     margin-bottom: 2px;
     color: #3e5252;
     cursor: pointer;
+    width: 95%;
+  }
+  @media only screen and (max-width: 600px){
+    ul li {
+      width: 90%;
+    }
   }
 
   p {
@@ -113,16 +110,6 @@ h3 {
 
   .holder {
     background: #fff;
-  }
-
-  input {
-    border: 2px solid black;
-    padding : 20px;
-    font-size: 1.3em;
-    background-color: #fff;
-    color: #687f7f;
-    width: 100%;
-    box-sizing: border-box;
   }
 
   .alert {
@@ -148,9 +135,22 @@ h3 {
         width: 32%;
     }
 
+    .categoryAddItem {
+        flex-grow: 1;
+        text-align: center;
+        font-size: 1.4em;
+    }
+
     .categoryItemNumber {
         flex-grow: 1;
         max-width: 5%;
+    }
+
+    .addCategory {
+        flex-grow: 1;
+        background: #8DE8A2;
+        color:#fff;
+        height:25px;
     }
 
   @keyframes bounce-in {
