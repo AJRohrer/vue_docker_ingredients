@@ -1,5 +1,10 @@
 <template>
     <div class="holder">
+      <AddCategoryModal v-show="isAddCategoryModalVisible" @close="closeNewCategory">
+        <div slot="header">test header</div>
+        <AddCategoryBody slot="body"></AddCategoryBody>
+        <div slot="footer">test footer</div>
+      </AddCategoryModal>
       <!-- For loop showing items in a list -->
       <ul>
         <li class="addCategory">
@@ -24,6 +29,8 @@
 import axios from "axios";
 import { recipeServiceHost } from '../constants'
 import CategoryListItem from './ListItemComponents/categorylistitem'
+import AddCategoryModal from './modals/modalwindow'
+import AddCategoryBody from './modals/addcategory'
 
 export default {
   name: 'CategoryList',
@@ -39,7 +46,8 @@ export default {
       },
       bgColor: 'blue',
       bgWidth: '100%',
-      bgHeight: '30px'
+      bgHeight: '30px',
+      isAddCategoryModalVisible: false
     }
   },
   mounted() {
@@ -52,11 +60,16 @@ export default {
   },
   methods: {
     createNewCategory() {
-      alert("You want to create a new recipe category!");
+      this.isAddCategoryModalVisible = true;
+    },
+    closeNewCategory() {
+      this.isAddCategoryModalVisible = false;
     }
   },
   components: {
-    CategoryListItem
+    CategoryListItem,
+    AddCategoryModal,
+    AddCategoryBody
   }
 }
 </script>

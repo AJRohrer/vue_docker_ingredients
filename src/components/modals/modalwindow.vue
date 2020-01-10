@@ -12,8 +12,9 @@
       <slot name="footer">
         This is the footer
 
-        <button type="button" @click="close">Close</button>
+        
       </slot>
+      <button type="button" @click="close">Close</button>
     </div>
   </div>
 </template>
