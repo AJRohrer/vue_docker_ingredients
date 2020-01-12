@@ -1,7 +1,7 @@
 <template>
     <div class="holder">
       <AddCategoryModal v-show="isAddCategoryModalVisible" @close="closeNewCategory">
-        <div slot="header">test header</div>
+        <div slot="header"><h3>Add Category:</h3></div>
         <AddCategoryBody slot="body"></AddCategoryBody>
         <div slot="footer">test footer</div>
       </AddCategoryModal>

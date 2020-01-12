@@ -8,13 +8,11 @@
       <slot name="body">
         This is where the controls will be to add the category/recipe
       </slot>
-
-      <slot name="footer">
-        This is the footer
-
-        
-      </slot>
-      <button type="button" @click="close">Close</button>
+      <div class="buttonContainer">
+            <button class="flexButton createButton" type="button" @click="addCategory(categoryToAdd)">Create</button>
+            <div class="flexSpacer"></div>
+            <button class="flexButton cancelButton" type="button" @click="close()">Cancel</button>
+        </div>
     </div>
   </div>
 </template>
@@ -89,4 +87,34 @@ export default {
     border: 1px solid #4AAE9B;
     border-radius: 2px;
   }
+
+  .createButton {
+        margin-left:5px;
+        background-color:#8DE8A2;
+        
+    }
+
+    .cancelButton {
+        margin-right:5px;
+        background-color:#cc4400;
+    }
+
+    .buttonContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .flexButton {
+        flex-grow: 1;
+        width: 35%;
+        border-radius: .5em;
+        border-style: solid;
+        color: white;
+        padding: 6px;
+    }
+
+    .flexSpacer {
+        flex-grow: 1;
+        width:10%;
+    }
 </style>
