@@ -1,10 +1,8 @@
 <template>
     <div class="holder">
-      <AddCategoryModal v-show="isAddCategoryModalVisible" @close="closeNewCategory">
-        <div slot="header"><h3>Add Category:</h3></div>
-        <AddCategoryBody slot="body"></AddCategoryBody>
-        <div slot="footer">test footer</div>
-      </AddCategoryModal>
+      
+      <AddCategoryModal v-show="isAddCategoryModalVisible" @close="closeNewCategory"></AddCategoryModal>
+
       <!-- For loop showing items in a list -->
       <ul>
         <li class="addCategory">
@@ -29,8 +27,7 @@
 import axios from "axios";
 import { recipeServiceHost } from '../constants'
 import CategoryListItem from './ListItemComponents/categorylistitem'
-import AddCategoryModal from './modals/modalwindow'
-import AddCategoryBody from './modals/addcategory'
+import AddCategoryModal from './modals/addcategory'
 
 export default {
   name: 'CategoryList',
@@ -68,8 +65,7 @@ export default {
   },
   components: {
     CategoryListItem,
-    AddCategoryModal,
-    AddCategoryBody
+    AddCategoryModal
   }
 }
 </script>
@@ -143,28 +139,28 @@ h3 {
         flex-wrap: wrap;
     }
 
-    .categoryItem {
-        flex-grow: 1;
-        width: 32%;
-    }
+  .categoryItem {
+      flex-grow: 1;
+      width: 32%;
+  }
 
-    .categoryAddItem {
-        flex-grow: 1;
-        text-align: center;
-        font-size: 1.4em;
-    }
+  .categoryAddItem {
+      flex-grow: 1;
+      text-align: center;
+      font-size: 1.4em;
+  }
 
-    .categoryItemNumber {
-        flex-grow: 1;
-        max-width: 5%;
-    }
+  .categoryItemNumber {
+      flex-grow: 1;
+      max-width: 5%;
+  }
 
-    .addCategory {
-        flex-grow: 1;
-        background: #8DE8A2;
-        color:#fff;
-        height:25px;
-    }
+  .addCategory {
+      flex-grow: 1;
+      background: #8DE8A2;
+      color:#fff;
+      height:25px;
+  }
 
   @keyframes bounce-in {
     0% {

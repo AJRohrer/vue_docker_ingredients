@@ -1,5 +1,8 @@
 <template>
     <div class="recipeContainer">
+
+        
+
         <router-link :to="{path: '/recipe/' + recipe._RecipeID}" tag="article" class="recipeItem">
         <div >
             {{recipe._RecipeName}}
@@ -15,11 +18,17 @@
     export default{
         name: 'RecipeListItem',
         props: ['recipe'],
+        data() {
+            return{
+                isAddRecipeModalVisible: false
+            }
+        },
 
         methods: {
             alertTrash(){
                 alert("Trash clicked!");
             }
+
         }
     }
 </script>

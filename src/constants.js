@@ -1,1 +1,1 @@
-export const recipeServiceHost = "http://localhost:8091";
+export const recipeServiceHost = "http://localhost:8090";

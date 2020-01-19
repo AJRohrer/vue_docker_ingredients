@@ -1,5 +1,10 @@
 <template>
     <div class="holder">
+
+        <AddRecipeModal v-show="isAddRecipeModalVisible" @close="closeNewRecipe">
+            
+        </AddRecipeModal>
+
         <ul>
             <li class="addRecipe">
                 <section class="recipeContainer">
@@ -20,6 +25,7 @@
 import axios from "axios";
 import {recipeServiceHost} from '../constants'
 import RecipeListItem from './ListItemComponents/recpielistitem'
+import AddRecipeModal from "./modals/modalwindow"
 
 export default {
     name: 'Recipe',
@@ -38,11 +44,15 @@ export default {
     },
     methods: {
         createNewRecipe() {
-            alert("You want to create a new recipe!");
+            this.isAddRecipeModalVisible = true;
+        },
+        closeNewRecipe() {
+            this.isAddRecipeModalVisible = false;
         }
     },
     components: {
-        RecipeListItem
+        RecipeListItem,
+        AddRecipeModal
     }
 }
 </script>

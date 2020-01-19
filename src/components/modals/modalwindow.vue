@@ -1,18 +1,7 @@
 <template>
   <div class="modal-backdrop">
     <div class="modal">
-      <slot name="header">
-        Add a recipe:
-      </slot>
-
-      <slot name="body">
-        This is where the controls will be to add the category/recipe
-      </slot>
-      <div class="buttonContainer">
-            <button class="flexButton createButton" type="button" @click="addCategory(categoryToAdd)">Create</button>
-            <div class="flexSpacer"></div>
-            <button class="flexButton cancelButton" type="button" @click="close()">Cancel</button>
-        </div>
+      <slot class="bodyPadding" name="body"></slot>      
     </div>
   </div>
 </template>
@@ -20,10 +9,13 @@
 <script>
 export default {
   name: 'modalwindow',
+  data() {    
+  },
+
   methods: {
     close() {
       this.$emit('close');
-    },
+    }   
   },
 };
 </script>
@@ -89,32 +81,40 @@ export default {
   }
 
   .createButton {
-        margin-left:5px;
-        background-color:#8DE8A2;
-        
-    }
+    margin-left:5px;
+    background-color:#8DE8A2;
+      
+  }
 
-    .cancelButton {
-        margin-right:5px;
-        background-color:#cc4400;
-    }
+  .cancelButton {
+    margin-right:5px;
+    background-color:#cc4400;
+  }
 
-    .buttonContainer {
-        display: flex;
-        flex-wrap: wrap;
-    }
+  .buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    .flexButton {
-        flex-grow: 1;
-        width: 35%;
-        border-radius: .5em;
-        border-style: solid;
-        color: white;
-        padding: 6px;
-    }
+  .flexButton {
+    flex-grow: 1;
+    width: 35%;
+    border-radius: .5em;
+    border-style: solid;
+    color: white;
+    padding: 6px;
+  }
 
-    .flexSpacer {
-        flex-grow: 1;
-        width:10%;
-    }
+  .flexSpacer {
+    flex-grow: 1;
+    width:10%;
+  }
+
+  .modalTitle {
+    font-size:24px;
+  }
+
+  .bodyPadding {
+    padding-top: 40px;
+  }
 </style>
