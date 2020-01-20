@@ -1,9 +1,7 @@
 <template>
     <div class="holder">
 
-        <AddRecipeModal v-show="isAddRecipeModalVisible" @close="closeNewRecipe">
-            
-        </AddRecipeModal>
+        <AddRecipeModalBody :categoryId="categoryId" v-show="isAddRecipeModalVisible" @close="closeNewRecipe()"></AddRecipeModalBody>
 
         <ul>
             <li class="addRecipe">
@@ -25,14 +23,15 @@
 import axios from "axios";
 import {recipeServiceHost} from '../constants'
 import RecipeListItem from './ListItemComponents/recpielistitem'
-import AddRecipeModal from "./modals/modalwindow"
+import AddRecipeModalBody from "./modals/addrecipe"
 
 export default {
     name: 'Recipe',
     data() {
         return {
             categoryId: this.$route.params.id,
-            recipes : []
+            recipes : [],
+            isAddRecipeModalVisible: false
         }
     },
     mounted(){
@@ -52,7 +51,7 @@ export default {
     },
     components: {
         RecipeListItem,
-        AddRecipeModal
+        AddRecipeModalBody
     }
 }
 </script>

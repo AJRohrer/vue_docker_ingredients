@@ -1,7 +1,6 @@
 <template>
   <div class="modal-backdrop">
-    <div class="modal">
-      <slot class="bodyPadding" name="body"></slot>      
+    <div class="modal">    
     </div>
   </div>
 </template>
