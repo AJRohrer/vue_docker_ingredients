@@ -14,19 +14,6 @@ spec:
         spec:
             containers:
                 - name: vue-container
-                  image: ajrohrer/recipevue:v1.1
+                  image: ajrohrer/recipevue:v1.3
                   ports:
                   - containerPort: 80
-kind: Service
-apiVersion: v1
-metadata:
-    name: recipe-service
-spec:
-    selector:
-        app: vue
-    ports:
-    - protocol: TCP
-    port: 80
-    targetPort: 80
-    nodePort: 31000
-    type: NodePort
