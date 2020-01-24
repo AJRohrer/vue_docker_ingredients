@@ -12,12 +12,16 @@
         props: ['ingredient'],
         data() {
             return{
+                ingredientList: []
             }
         },
 
         methods: {
             alertTrash(){
                 alert("Trash clicked!");
+            },
+            emitIngredientList(){
+                this.$emit('ingredientList', this.ingredientList)
             }
 
         }
